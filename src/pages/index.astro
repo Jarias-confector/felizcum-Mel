@@ -1,0 +1,219 @@
+---
+import '../styles/global.css';
+
+const siteUrl = Astro.url;
+const ogImage = new URL('/images/cats.jpg', siteUrl);
+---
+
+<html lang="es" class="overflow-x-hidden w-full max-w-[100vw]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>¡Muchas felicidades Itzel por tu cumpleaños!</title>
+    <meta name="description" content="¡Muchas felicidades Itzel por tu cumpleaños!" />
+    
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:title" content="¡Muchas felicidades Itzel por tu cumpleaños!" />
+    <meta property="og:description" content="¡Muchas felicidades Itzel por tu cumpleaños!" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden w-full max-w-[100vw]">
+
+    <div class="relative w-full max-w-2xl mt-32 md:mt-40">
+      <!-- Imágenes flotantes (Salen por detrás de la carta) -->
+      <div class="absolute -top-24 md:-top-72 -left-28 md:-left-[22rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards]">
+        <div class="animate-[float_4s_ease-in-out_infinite_1.2s]">
+          <img 
+            src="/images/cat-cake-right.webp" 
+            alt="Cat Cake" 
+            class="gallery-img cursor-pointer pixelated w-[280px] md:w-[52rem] drop-shadow-xl rotate-12 transition-transform hover:scale-110"
+          />
+        </div>
+      </div>
+      <div class="absolute -top-24 md:-top-72 -right-28 md:-right-[22rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards_0.3s]">
+        <div class="animate-[float_4s_ease-in-out_infinite_1.5s]">
+          <img 
+            src="/images/snoopy-cake-left.webp" 
+            alt="Snoopy Cake" 
+            class="gallery-img cursor-pointer pixelated w-[280px] md:w-[52rem] drop-shadow-xl -rotate-12 transition-transform hover:scale-110"
+          />
+        </div>
+      </div>
+
+      <!-- Tarjeta Principal (Diseño de Carta) -->
+      <main class="w-full bg-[#fdfbf7] border-4 border-[#3b4226] shadow-[8px_8px_0px_#3b4226] p-6 md:p-10 rounded-none text-left relative z-10 overflow-hidden">
+        
+        <!-- Líneas de papel de carta -->
+        <div class="absolute inset-0 pointer-events-none opacity-40" style="background-image: repeating-linear-gradient(transparent, transparent 31px, #a3b18a 31px, #a3b18a 32px); margin-top: 5rem;"></div>
+        
+        <!-- Sello postal retro -->
+        <div class="absolute top-4 right-4 md:top-8 md:right-8 border-2 border-[#d90429] text-[#d90429] p-2 rotate-12 opacity-80 rounded-sm shadow-sm bg-white/50">
+          <p class="font-bold text-sm md:text-base tracking-widest uppercase">¡21 AÑOS!</p>
+        </div>
+
+        <h1 class="text-xl md:text-2xl text-[#6b7a2d] mb-4 flex items-center justify-start gap-2 relative z-10 font-bold">
+          Hola Itzel,
+        </h1>
+
+        <!-- Cuadro de Diálogo (Texto largo) -->
+        <div class="relative z-10 mb-8 pt-2">
+          <p class="text-base md:text-lg leading-[32px] text-[#3b4226] min-h-[14rem] font-medium">
+            <span id="typewriter" data-text="¡Espero que hayas tenido un cumpleaños número 21 espectacular! Deseo que la hayas pasado excelente rodeada de tus familiares, amigos y de todas las personas que te aprecian y te aman. Espero que hayas disfrutado tu día al máximo y lo hayas celebrado a lo grande, porque te lo mereces. Que este nuevo año de vida que recién comienzas esté lleno de aventuras increíbles, grandes aprendizajes, momentos de mucha paz, millones de sonrisas y puras cosas buenas..."></span>
+            <span id="typewriter-icon" class="opacity-0 transition-opacity duration-500 inline-block align-middle ml-1 text-[#d90429]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </span>
+          </p>
+        </div>
+
+        <!-- Botón Interactivo -->
+        <div class="flex justify-center md:justify-end relative z-10">
+          <button 
+            id="celebrate-btn" 
+            class="retro-btn flex items-center justify-center gap-2 text-xs md:text-sm px-8 py-3 bg-[#8b9a46] hover:bg-[#6b7a2d] text-white border-2 border-[#3b4226] shadow-[4px_4px_0px_#3b4226] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer">
+            ABRIR REGALO
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+          </button>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Modal del Regalo -->
+    <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-500">
+      <div class="relative flex flex-col items-center w-full px-4">
+        
+        <!-- Fase 1: Caja de regalo cerrada -->
+        <div id="gift-box-container" class="cursor-pointer transition-transform hover:scale-110 flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-32 h-32 md:w-48 md:h-48 text-[#d90429] animate-[wiggle_1s_ease-in-out_infinite] drop-shadow-xl"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+          <p class="text-white text-center mt-4 font-bold text-lg md:text-xl animate-pulse drop-shadow-md">¡Tócalo para abrir!</p>
+        </div>
+
+        <!-- Fase 2: Regalo abierto (Mensaje Final) -->
+        <div id="gift-opened-container" class="hidden flex-col items-center bg-[#fdfbf7] p-8 md:p-12 border-4 border-[#3b4226] shadow-[8px_8px_0px_#3b4226] max-w-lg w-full text-center relative">
+          <h2 class="text-2xl md:text-3xl font-bold text-[#d90429] mb-4 flex items-center justify-center gap-2">
+            Mis mejores deseos:
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </h2>
+          <p class="text-lg md:text-xl text-[#3b4226] font-medium mb-8 leading-relaxed">
+            Deseo que cumplas todas esas metas y objetivos que alguna vez me contaste. Eres una persona increíblemente capaz y perseverante en todo lo que te propones; sé que no te detienes hasta lograrlo. Te deseo lo mejor y espero que no te rindas jamás.<br/><br/>
+            Si en algún momento necesitas apoyo, sabes que puedes contar conmigo.<br/><br/>
+            <span class="font-bold text-[#6b7a2d]">¡Un verdadero placer haberte conocido, Itzel!</span>
+          </p>
+          <button id="close-modal-btn" class="retro-btn px-8 py-2 bg-[#8b9a46] hover:bg-[#6b7a2d] text-white border-2 border-[#3b4226] shadow-[4px_4px_0px_#3b4226] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all font-bold cursor-pointer">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script de interactividad en el cliente -->
+    <script>
+      import confetti from 'canvas-confetti';
+
+      // Referencias al Modal
+      const modal = document.getElementById('gift-modal');
+      const boxContainer = document.getElementById('gift-box-container');
+      const openedContainer = document.getElementById('gift-opened-container');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+
+      const button = document.getElementById('celebrate-btn');
+      button?.addEventListener('click', () => {
+        // Mostrar el modal
+        if (modal) {
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          modal.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      });
+
+      // Clic en la caja de regalo (Fase 1 -> Fase 2)
+      boxContainer?.addEventListener('click', () => {
+        // Disparar confeti principal con un z-index alto para que cubra el modal
+        confetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.5 },
+          colors: ['#8b9a46', '#d90429', '#e6edd3', '#6b7a2d', '#ffffff'],
+          zIndex: 9999
+        });
+        
+        // Cambiar fase
+        boxContainer.classList.add('hidden');
+        openedContainer?.classList.remove('hidden');
+        openedContainer?.classList.add('flex');
+      });
+
+      // Clic en Cerrar Modal
+      closeModalBtn?.addEventListener('click', () => {
+        if (modal) {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          modal.classList.remove('opacity-100', 'pointer-events-auto');
+          
+          // Resetear el estado para la próxima vez
+          setTimeout(() => {
+            boxContainer?.classList.remove('hidden');
+            openedContainer?.classList.add('hidden');
+            openedContainer?.classList.remove('flex');
+          }, 500);
+        }
+      });
+
+      // Efecto Typewriter (Máquina de escribir)
+      const textElement = document.getElementById('typewriter');
+      if (textElement) {
+        const text = textElement.dataset.text || "";
+        textElement.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+          if (i < text.length) {
+            textElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 35);
+          } else {
+            const icon = document.getElementById('typewriter-icon');
+            if (icon) icon.classList.remove('opacity-0');
+          }
+        }
+        
+        // Iniciar efecto un momento después de cargar la página
+        setTimeout(typeWriter, 500);
+      }
+
+      // Animación y efecto al hacer clic en imágenes
+      const images = document.querySelectorAll('.gallery-img');
+      images.forEach(img => {
+        img.addEventListener('click', (e) => {
+            const rect = img.getBoundingClientRect();
+            // Calcular posición del click relativo a la ventana para el confeti
+            const x = (rect.left + rect.width / 2) / window.innerWidth;
+            const y = (rect.top + rect.height / 2) / window.innerHeight;
+            
+            confetti({
+                particleCount: 40,
+                spread: 50,
+                origin: { x, y },
+                colors: ['#ffb6c1', '#ff69b4'], // Rosa para efecto de corazones/cariño
+                shapes: ['circle'],
+                scalar: 0.8
+            });
+        });
+      });
+    </script>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+      @keyframes wiggle {
+        0%, 100% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+      }
+      @keyframes slideUp {
+        0% { transform: translateY(100%); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+  </body>
+</html>
