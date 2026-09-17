@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Pirata+One&family=UnifrakturMaguntia&family=Press+Start+2P&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
 
-/* Regla de oro para imágenes pixel art */
+/* Regla para imagenes pixel art */
 .pixelated {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
 
 body {
-  font-family: 'Silkscreen', cursive, sans-serif;
-  background-color: #e6edd3;
-  color: #3b4226; /* Verde oscuro para el texto */
+  font-family: 'Cinzel', serif;
+  background-color: #0d080a;
+  background-image: radial-gradient(#3a0d18 1px, transparent 1px), radial-gradient(#1f050b 1px, #0d080a 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: #1a0508;
 }
 
-h1, h2, .retro-btn {
-  font-family: 'Press Start 2P', cursive;
+.gothic-title {
+  font-family: 'UnifrakturMaguntia', 'Pirata One', cursive;
+}
+
+.gothic-font {
+  font-family: 'Pirata One', cursive;
+}
+
+.pixel-font {
+  font-family: 'Press Start 2P', monospace;
 }
