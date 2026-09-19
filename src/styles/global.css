@@ -26,3 +26,19 @@ body {
 .pixel-font {
   font-family: 'Press Start 2P', monospace;
 }
+
+/* Scrollbar personalizado para las cartas del regalo */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ffe4e6;
+  border-left: 2px solid #000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #991b1b;
+  border: 1px solid #000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}

@@ -3,6 +3,99 @@ import '../styles/global.css';
 
 const siteUrl = Astro.url;
 const ogImage = new URL('/images/cats.jpg', siteUrl);
+
+const playlist = [
+  {
+    title: "Paprika",
+    artist: "Japanese Breakfast",
+    youtubeId: "aA5l2qsX_O8",
+    description: "Hace casi 10 años que te conozco y siento que esta canción define perfectamente cómo has logrado evolucionar y cambiar como persona, cada día logrando superar cada uno de los retos que te propongas. Aunque no esté presente, sé lo mucho que has alcanzado como persona."
+  },
+  {
+    title: "Shiver",
+    artist: "Coldplay",
+    youtubeId: "u8XFFTWwSvY",
+    description: "Por alguna extraña razón, después de haberte conocido en persona, esta canción se ha sentido muy personal para definir de alguna forma el lazo entre los dos. Sé que ahora los dos somos adultos y tenemos vidas independientes cada uno, pero esta canción solo me hace recordarte completamente."
+  },
+  {
+    title: "No One Noticed",
+    artist: "The Marías",
+    youtubeId: "Qn8F_u0vBNI",
+    description: "Cada vez que escucho esta canción solo me hace recordar el 12 de octubre de 2024. Aunque estaba pasando posiblemente por el peor momento de mi vida, solo saber que te iba a conocer me hacía sentirme vivo de nuevo."
+  },
+  {
+    title: "Ciencia de la Lluvia",
+    artist: "Enjambre",
+    youtubeId: "TGMi9uDJD50",
+    description: "Creo que esta canción define perfectamente lo que deben sentir las personas al estar cerca de ti."
+  },
+  {
+    title: "El día del amigo",
+    artist: "CA7RIEL & Paco Amoroso",
+    youtubeId: "Cq0jaj-eocI",
+    description: "¡Jajaja! Esta canción siento que muestra el vínculo que tenemos desde el lado divertido y gracioso. Hablar contigo en cualquier formato es divertido y gracioso, sinceramente eres de las personas más funny que he conocido."
+  },
+  {
+    title: "Miss You",
+    artist: "Foster The People",
+    youtubeId: "ydYjtKWRj0g",
+    description: "Define perfectamente tu lado muy nostálgico de las cosas. Creo que a veces llegaste a vivir momentos recordando solo el pasado cuando las cosas buenas están por llegar."
+  },
+  {
+    title: "Outro: Ego",
+    artist: "BTS",
+    youtubeId: "LmApDbvNCXg",
+    description: "Aunque el Hobi sea un nye, esta rola sería fácilmente una para ti. Ver cómo ya no eres la misma de hace 10 años me hace sentir el mismo feeling de esta canción, y saber que genuinamente eres feliz me pone feliz a mí también."
+  },
+  {
+    title: "Dog Days Are Over",
+    artist: "Florence + The Machine",
+    youtubeId: "iWOyfLBYtuU",
+    description: "¿Ya te he dicho lo orgulloso que estoy de la persona que eres? ¿No? ¿Sí? No hay mejor canción para describir lo que te ha pasado."
+  },
+  {
+    title: "Somebody's Watching Me",
+    artist: "Rockwell",
+    youtubeId: "7YvAYIJSSZY",
+    description: "Esta canción me recuerda a Halloween, y Halloween me recuerda a ti y a mí, así que esta canción representa todo un sentimiento de octubre y Halloween."
+  },
+  {
+    title: "Remember the Time",
+    artist: "Michael Jackson",
+    youtubeId: "LeiFF0gvqcc",
+    description: "En realidad esta parte tiene un contexto muy curioso, ¡jajaja! No sé por qué todo el álbum Dangerous me hace recordarte, tanto las canciones como la portada. Sinceramente, por alguna razón la portada solo me hace pensar en ti; es muy chistoso, creo yo."
+  },
+  {
+    title: "Half Mast",
+    artist: "Empire Of The Sun",
+    youtubeId: "4Z8R38QrBhM",
+    description: "A veces siento que, aunque no estemos muy presentes últimamente, creo que la vida sin tu presencia no sería la misma."
+  },
+  {
+    title: "Movies",
+    artist: "Weyes Blood",
+    youtubeId: "RFtRq6t3jOo",
+    description: "Cosas que me hacen recordar a ti: el cine. Sé lo mucho que te gusta ir al cine; es curioso que cosas que podrían parecer tan insignificantes me hagan recordarte completamente."
+  },
+  {
+    title: "Carnival",
+    artist: "The Cardigans",
+    youtubeId: "7bK5EPjGri4",
+    description: "Los payasitos y circos también me hacen acordarme de ti, y esta canción es algo que me hace recordar eso."
+  },
+  {
+    title: "Magnolia",
+    artist: "Laufey",
+    youtubeId: "PiqXigZCugs",
+    description: "Tú eres la Magnolia de mi vida."
+  },
+  {
+    title: "Te lo pido por favor",
+    artist: "Juan Gabriel",
+    youtubeId: "HQhzzU9uysM",
+    description: "No hay canción más representativa que exprese lo que siento por ti."
+  }
+];
 ---
 
 <html lang="es" class="overflow-x-hidden w-full max-w-[100vw]">
@@ -60,7 +153,7 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
         <!-- Cuadro de Diálogo -->
         <div class="relative z-10 mb-8 pt-2">
           <p class="text-base md:text-xl leading-[34px] text-[#1a0508] min-h-[14rem] font-medium tracking-wide">
-            <span id="typewriter" data-text="¡Espero que tengas un cumpleaños legendario y lleno de poder! Deseo que la pases increíble junto a todos los que te aprecian y te rodean. Que este nuevo ciclo venga cargado de grandes batallas ganadas, aventuras fascinantes, paz interior y éxitos rotundos. Porque te lo mereces, que no falte la fuerza y la alegría en cada paso..."></span>
+            <span id="typewriter" data-text="¡Hola Melissa, feliz cumpleaños número 25! Espero que este sabadazo te la pases súper bien comiendo tu Red Velvet azulado. No sé si vayas a invitar a tus amijochis, pero pásatela súper bien con tus seres queridos. ¡Que todo lo que tengas planeado realizar el día de hoy se cumpla perfectamente y que tus sueños se vuelvan realidad cada día!"></span>
             <span id="typewriter-icon" class="opacity-0 transition-opacity duration-500 inline-block align-middle ml-1 text-[#dc2626]">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             </span>
@@ -81,8 +174,8 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
     </div>
 
     <!-- Modal del Regalo -->
-    <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-sm">
-      <div class="relative flex flex-col items-center w-full px-4">
+    <div id="gift-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-sm p-3 md:p-6">
+      <div class="relative flex flex-col items-center w-full max-w-4xl max-h-[92vh]">
         
         <!-- Fase 1: Caja de regalo cerrada -->
         <div id="gift-box-container" class="cursor-pointer transition-transform hover:scale-110 flex flex-col items-center">
@@ -92,21 +185,78 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
           </div>
         </div>
 
-        <!-- Fase 2: Regalo abierto (Mensaje Final con Pixel Cake) -->
-        <div id="gift-opened-container" class="hidden flex-col items-center bg-[#fff0f3] p-8 md:p-10 border-4 border-black shadow-[10px_10px_0px_#991b1b] max-w-lg w-full text-center relative">
-          <div class="mb-4">
-            <img src="/images/anime/opened-gift.gif" alt="Regalo abierto GIF" class="w-48 h-48 md:w-56 md:h-56 object-cover mx-auto drop-shadow-md rounded border-2 border-black" />
+        <!-- Fase 2: Regalo abierto (Playlist en Cartas) -->
+        <div id="gift-opened-container" class="hidden flex-col items-center bg-[#fff0f3] border-4 border-black shadow-[10px_10px_0px_#991b1b] w-full max-h-[88vh] text-center relative overflow-hidden">
+          
+          <!-- Encabezado fijo del regalo -->
+          <div class="sticky top-0 bg-[#fff0f3] z-20 border-b-4 border-black p-4 md:p-6 w-full flex flex-col items-center relative">
+            <button id="close-modal-top-btn" class="absolute top-3 right-4 text-black hover:text-[#dc2626] font-extrabold text-2xl cursor-pointer p-1 transition-colors" title="Cerrar">✕</button>
+            
+            <div class="flex items-center justify-center gap-4 mb-2">
+              <img src="/images/anime/opened-gift.gif" alt="Regalo abierto GIF" class="w-16 h-16 md:w-20 md:h-20 object-cover mx-auto drop-shadow-md rounded border-2 border-black" />
+              <div class="text-left">
+                <h2 class="text-2xl md:text-3xl font-black text-[#991b1b] gothic-title leading-none">
+                  Tu Playlist Especial
+                </h2>
+                <span class="pixel-font text-[10px] md:text-xs text-[#991b1b] tracking-wider uppercase">{playlist.length} CANCIONES DE RECUERDOS</span>
+              </div>
+            </div>
+            
+            <p class="text-xs md:text-sm text-[#1a0508] font-medium max-w-2xl text-center leading-relaxed">
+              De regalo te daré una playlist con las canciones que me hacen recordarte. Cada una guarda un momento, un sentimiento o algo especial de ti.
+            </p>
           </div>
-          <h2 class="text-2xl md:text-3xl font-black text-[#991b1b] mb-4 flex items-center justify-center gap-2 gothic-title">
-            Mis mejores deseos
-          </h2>
-          <p class="text-base md:text-lg text-[#1a0508] font-medium mb-6 leading-relaxed">
-            Deseo que alcances todos y cada uno de los objetivos y metas que te propongas. Eres una persona increíblemente tenaz y con una fuerza única; que nada ni nadie detenga tu camino.<br/><br/>
-            ¡Que tengas un día extraordinario y una vida llena de momentos memorables!
-          </p>
-          <button id="close-modal-btn" class="retro-btn pixel-font px-8 py-3 bg-[#991b1b] hover:bg-[#b91c1c] text-[#ffe4e6] border-2 border-black shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all font-bold cursor-pointer text-xs md:text-sm">
-            Cerrar
-          </button>
+
+          <!-- Grilla de cartas scrollable -->
+          <div class="overflow-y-auto p-4 md:p-6 w-full max-h-[calc(88vh-160px)] custom-scrollbar">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 text-left">
+              {playlist.map((song, index) => (
+                <div class="bg-white border-2 border-black shadow-[4px_4px_0px_#000000] p-4 flex flex-col justify-between hover:shadow-[6px_6px_0px_#991b1b] transition-all relative group">
+                  <!-- Número de track -->
+                  <div class="absolute top-3 right-3 bg-[#ffe4e6] border border-black text-[#991b1b] pixel-font text-[10px] px-2 py-0.5 font-bold">
+                    #{index + 1}
+                  </div>
+
+                  <div>
+                    <!-- Info de canción -->
+                    <div class="flex items-start gap-2 mb-2 pr-10">
+                      <span class="text-lg">🎵</span>
+                      <div>
+                        <h3 class="font-extrabold text-[#991b1b] text-base leading-snug">{song.title}</h3>
+                        <p class="text-xs text-gray-600 font-semibold">{song.artist}</p>
+                      </div>
+                    </div>
+
+                    <!-- Mensaje / Descripción -->
+                    <p class="text-xs md:text-sm text-gray-800 font-medium leading-relaxed my-3 bg-[#fff0f3]/60 p-2.5 border-l-2 border-[#991b1b]">
+                      "{song.description}"
+                    </p>
+                  </div>
+
+                  <!-- Video Preview de YouTube -->
+                  <div class="mt-2 pt-2 border-t border-dashed border-gray-300">
+                    <div class="relative w-full aspect-video rounded overflow-hidden border border-black shadow-inner bg-black">
+                      <iframe 
+                        class="w-full h-full"
+                        src={`https://www.youtube-nocookie.com/embed/${song.youtubeId}`}
+                        title={`${song.title} - ${song.artist}`}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div class="mt-6 mb-2 text-center">
+              <button id="close-modal-btn" class="retro-btn pixel-font px-8 py-3 bg-[#991b1b] hover:bg-[#b91c1c] text-[#ffe4e6] border-2 border-black shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all font-bold cursor-pointer text-xs md:text-sm">
+                Cerrar Regalo
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -120,6 +270,7 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
       const boxContainer = document.getElementById('gift-box-container');
       const openedContainer = document.getElementById('gift-opened-container');
       const closeModalBtn = document.getElementById('close-modal-btn');
+      const closeModalTopBtn = document.getElementById('close-modal-top-btn');
 
       const button = document.getElementById('celebrate-btn');
       button?.addEventListener('click', () => {
@@ -147,8 +298,8 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
         openedContainer?.classList.add('flex');
       });
 
-      // Clic en Cerrar Modal
-      closeModalBtn?.addEventListener('click', () => {
+      // Función para cerrar el modal
+      function handleCloseModal() {
         if (modal) {
           modal.classList.add('opacity-0', 'pointer-events-none');
           modal.classList.remove('opacity-100', 'pointer-events-auto');
@@ -160,7 +311,10 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
             openedContainer?.classList.remove('flex');
           }, 500);
         }
-      });
+      }
+
+      closeModalBtn?.addEventListener('click', handleCloseModal);
+      closeModalTopBtn?.addEventListener('click', handleCloseModal);
 
       // Efecto Typewriter (Máquina de escribir)
       const textElement = document.getElementById('typewriter');
