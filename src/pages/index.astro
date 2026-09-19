@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 
-const siteUrl = Astro.url;
-const ogImage = new URL('/images/cats.jpg', siteUrl);
+const siteUrl = Astro.site ? Astro.site.href : Astro.url.href;
+const ogImage = new URL('/images/cats.jpg', Astro.site ?? Astro.url).href;
 
 const playlist = [
   {
@@ -102,15 +102,30 @@ const playlist = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>¡Muchas felicidades Melissa por tu cumpleaños!</title>
-    <meta name="description" content="¡Muchas felicidades Melissa por tu cumpleaños!" />
+    <title>¡Muchas felicidades Melissa por tu cumpleaños! 🎉🎂</title>
+    <meta name="description" content="¡Muchas felicidades Melissa por tu cumpleaños! Una sorpresa especial con playlist y momentos inolvidables." />
     
-    <!-- Open Graph / WhatsApp -->
-    <meta property="og:title" content="¡Muchas felicidades Melissa por tu cumpleaños!" />
-    <meta property="og:description" content="¡Muchas felicidades Melissa por tu cumpleaños!" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph / WhatsApp / Facebook / Telegram -->
+    <meta property="og:site_name" content="Feliz Cumpleaños Melissa" />
+    <meta property="og:title" content="¡Muchas felicidades Melissa por tu cumpleaños! 🎉🎂" />
+    <meta property="og:description" content="¡Muchas felicidades Melissa por tu cumpleaños! Una sorpresa especial con playlist y momentos inolvidables." />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="¡Muchas felicidades Melissa por tu cumpleaños! 🎉🎂" />
+    <meta name="twitter:description" content="¡Muchas felicidades Melissa por tu cumpleaños! Una sorpresa especial con playlist y momentos inolvidables." />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body class="min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden w-full max-w-[100vw]">
 
