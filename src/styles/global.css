@@ -10,9 +10,8 @@
 body {
   font-family: 'Cinzel', serif;
   background-color: #0d080a;
-  background-image: radial-gradient(#3a0d18 1px, transparent 1px), radial-gradient(#1f050b 1px, #0d080a 1px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpolygon points='15,9 16.5,13.5 21,15 16.5,16.5 15,21 13.5,16.5 9,15 13.5,13.5' fill='%23991b1b' opacity='0.8'/%3E%3Cpath d='M 45,16.5 C 43.5,14 40,14.5 40,17 C 40,19.5 45,22.5 45,22.5 C 45,22.5 50,19.5 50,17 C 50,14.5 46.5,14 45,16.5 Z' fill='%23dc2626' opacity='0.7'/%3E%3Cpath d='M 15,46.5 C 13.5,44 10,44.5 10,47 C 10,49.5 15,52.5 15,52.5 C 15,52.5 20,49.5 20,47 C 20,44.5 16.5,44 15,46.5 Z' fill='%23f43f5e' opacity='0.6'/%3E%3Cpolygon points='45,39 46.5,43.5 51,45 46.5,46.5 45,51 43.5,46.5 39,45 43.5,43.5' fill='%23991b1b' opacity='0.8'/%3E%3Cpolygon points='30,28 30.6,29.4 32,30 30.6,30.6 30,32 29.4,30.6 28,30 29.4,29.4' fill='%23991b1b' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
   color: #1a0508;
 }
 

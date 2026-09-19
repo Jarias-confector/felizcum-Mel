@@ -21,23 +21,23 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
   </head>
   <body class="min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden w-full max-w-[100vw]">
 
-    <div class="relative w-full max-w-2xl mt-32 md:mt-40">
+    <div class="relative w-full max-w-2xl mt-44 md:mt-48">
       <!-- Imágenes flotantes de Killua y Johnny Joestar sosteniendo pastel de cumpleaños -->
-      <div class="absolute -top-24 md:-top-56 -left-20 md:-left-[18rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards]">
+      <div class="absolute -top-40 md:-top-56 -left-4 sm:-left-16 md:-left-[18rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards]">
         <div class="animate-[float_4s_ease-in-out_infinite_1.2s]">
           <img 
             src="/images/anime/killua-holding-cake.gif" 
             alt="Killua con pastel de cumpleaños" 
-            class="gallery-img cursor-pointer pixelated w-[220px] md:w-[340px] drop-shadow-[0_10px_20px_rgba(220,38,38,0.35)] -rotate-6 transition-transform hover:scale-110"
+            class="gallery-img cursor-pointer pixelated w-[180px] sm:w-[220px] md:w-[340px] drop-shadow-[0_10px_20px_rgba(220,38,38,0.35)] -rotate-6 transition-transform hover:scale-110"
           />
         </div>
       </div>
-      <div class="absolute -top-24 md:-top-56 -right-20 md:-right-[18rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards_0.3s]">
+      <div class="absolute -top-40 md:-top-56 -right-4 sm:-right-16 md:-right-[18rem] z-0 opacity-0 animate-[slideUp_1.2s_ease-out_forwards_0.3s]">
         <div class="animate-[float_4s_ease-in-out_infinite_1.5s]">
           <img 
             src="/images/anime/johnny-holding-cake.gif" 
             alt="Johnny Joestar con pastel de cumpleaños" 
-            class="gallery-img cursor-pointer pixelated w-[220px] md:w-[340px] drop-shadow-[0_10px_20px_rgba(220,38,38,0.35)] rotate-6 transition-transform hover:scale-110"
+            class="gallery-img cursor-pointer pixelated w-[180px] sm:w-[220px] md:w-[340px] drop-shadow-[0_10px_20px_rgba(220,38,38,0.35)] rotate-6 transition-transform hover:scale-110"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ const ogImage = new URL('/images/cats.jpg', siteUrl);
         <!-- Fase 2: Regalo abierto (Mensaje Final con Pixel Cake) -->
         <div id="gift-opened-container" class="hidden flex-col items-center bg-[#fff0f3] p-8 md:p-10 border-4 border-black shadow-[10px_10px_0px_#991b1b] max-w-lg w-full text-center relative">
           <div class="mb-4">
-            <img src="/images/anime/birthday-cake-pixel.gif" alt="Birthday Cake Pixel Art" class="w-24 h-24 md:w-32 md:h-32 pixelated mx-auto drop-shadow-md" />
+            <img src="/images/anime/opened-gift.gif" alt="Regalo abierto GIF" class="w-48 h-48 md:w-56 md:h-56 object-cover mx-auto drop-shadow-md rounded border-2 border-black" />
           </div>
           <h2 class="text-2xl md:text-3xl font-black text-[#991b1b] mb-4 flex items-center justify-center gap-2 gothic-title">
             Mis mejores deseos
